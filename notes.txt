@@ -1,0 +1,2 @@
+Extend number support to float
+
