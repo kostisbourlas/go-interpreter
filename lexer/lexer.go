@@ -1,7 +1,7 @@
 package lexer
 
 import (
-	"github.com/kostisbourlas/go-interpreter/token"
+    "github.com/kostisbourlas/go-interpreter/token"
 )
 
 
@@ -35,7 +35,6 @@ func (l *Lexer) readIdentifier() string {
     }
     return l.input[position:l.position] 
 }
-
 
 func (l *Lexer) readNumber() string {
     position := l.position
@@ -71,10 +70,10 @@ func (l *Lexer) NextToken() token.Token {
             l.readChar()
             tok = token.Token{Type: token.EQ, Literal: string(ch) + string(l.ch)}
         } else {
-            tok = newToken(token.ASSIGN, l.ch)    
+            tok = newToken(token.ASSIGN, l.ch)
         }
     case ';':
-        tok = newToken(token.SEMICOLON, l.ch)    
+        tok = newToken(token.SEMICOLON, l.ch)
     case '(':
         tok = newToken(token.LPAREN, l.ch)
     case ')':
