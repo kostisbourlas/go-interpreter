@@ -1,11 +1,11 @@
 package parser
 
 import (
-	"fmt"
+    "fmt"
 
-	"github.com/kostisbourlas/go-interpreter/ast"
-	"github.com/kostisbourlas/go-interpreter/lexer"
-	"github.com/kostisbourlas/go-interpreter/token"
+    "github.com/kostisbourlas/go-interpreter/ast"
+    "github.com/kostisbourlas/go-interpreter/lexer"
+    "github.com/kostisbourlas/go-interpreter/token"
 )
 
 type Parser struct {

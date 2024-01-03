@@ -1,10 +1,10 @@
 package parser
 
 import (
-	"testing"
+    "testing"
 
-	"github.com/kostisbourlas/go-interpreter/ast"
-	"github.com/kostisbourlas/go-interpreter/lexer"
+    "github.com/kostisbourlas/go-interpreter/ast"
+    "github.com/kostisbourlas/go-interpreter/lexer"
 ) 
 
 func TestLetStatements(t *testing.T) {

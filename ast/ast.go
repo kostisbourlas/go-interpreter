@@ -1,9 +1,9 @@
 package ast
 
 import (
-	"bytes"
+    "bytes"
 
-	"github.com/kostisbourlas/go-interpreter/token"
+    "github.com/kostisbourlas/go-interpreter/token"
 )
 
 type Node interface {
