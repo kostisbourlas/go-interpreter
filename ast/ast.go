@@ -21,6 +21,21 @@ type Expression interface {
     expressionNode()
 }
 
+type Identifier struct {
+    Token token.Token // the token.IDENT token
+    Value string
+}
+
+func (i *Identifier) expressionNode() {}
+
+func (i *Identifier) TokenLiteral() string {
+    return i.Token.Literal
+}
+
+func (i *Identifier) String() string {
+   return i.Value 
+}
+
 type LetStatement struct {
     Token token.Token // the token.LET token
     Name *Identifier
@@ -86,21 +101,6 @@ func (es *ExpressionStatement) String() string {
         return es.Expression.String()
     }
     return ""
-}
-
-type Identifier struct {
-    Token token.Token // the token.IDENT token
-    Value string
-}
-
-func (i *Identifier) statementNode() {}
-
-func (i *Identifier) TokenLiteral() string {
-    return i.Token.Literal
-}
-
-func (i *Identifier) String() string {
-   return i.Value 
 }
 
 type Program struct {
