@@ -1,20 +1,20 @@
 package main
 
 import (
-	"fmt"
-	"os"
-	"os/user"
+    "fmt"
+    "os"
+    "os/user"
 
-	"github.com/kostisbourlas/go-interpreter/repl"
+    "github.com/kostisbourlas/go-interpreter/repl"
 )
 
 func main() {
-	user, err := user.Current()
-	if err != nil {
-		panic(err)
-	}
-	fmt.Printf("Hello %s! This is the Monkey programming language!\n",
-		user.Username)
-	fmt.Println("Feel free to type in commands!")
-	repl.Start(os.Stdin)
+    user, err := user.Current()
+    if err != nil {
+        panic(err)
+    }
+    fmt.Printf("Hello %s! This is the Monkey programming language!\n",
+        user.Username)
+    fmt.Println("Feel free to type in commands!")
+    repl.Start(os.Stdin) 
 }
